@@ -16,9 +16,28 @@
 {
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #d19494;
+	background-color: #333333;
 }
 
+.opacidad::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.opacidad::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+.opacidad::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #7fb0b3;
+}
 
 *{
     margin: 0;
@@ -27,12 +46,14 @@
 
 body{
     background: rgba(165, 161, 161, 0.6);
+    font-family: 'Muli', sans-serif;
 }
 
 .img{
-    direction: rtl;
+    
     margin: 30px 0;
     overflow-y: scroll;
+    overflow-x: hidden;
     width: 100%;
     height: 250px;
 }
@@ -46,10 +67,18 @@ body{
 .opacidad{
     position: absolute;
     z-index: 1;
+    direction: rtl;
+    overflow-y: scroll;
+    overflow-x: hidden;
     width: 50%;
     height: 250px;
     background: rgba(165, 161, 161, 0.6);
     opacity: 0;
+}
+
+.texto{
+    color: #333333;
+    font-weight: 900;
 }
 
 .img:hover .opacidad{
